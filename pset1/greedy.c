@@ -9,14 +9,11 @@ int main(void)
         int a[3]={25,10,5};
         do
         {
-                printf("How much\n");
+                printf("How much ");
                 scanf("%f", &amt);
         } while (amt < 0);
 
-        printf("%f\n", amt);
-
         cent = (int)round(amt*100.00);
-        printf("%d\n",cent );
         count = 0;
         for (int i = 0; i < 3; i++)
         {
