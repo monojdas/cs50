@@ -13,6 +13,18 @@ int main(int argc, char const *argv[])
                 return 1;
         }
 
+        for (int i = 0; i < strlen(argv[1]); i++)
+        {
+                if (isdigit(argv[1][i]))
+                {
+
+                }
+                else
+                {
+                        printf("check <key> type\n");
+                        return 1;
+                }
+        }
         //Initialization
         char *ptext=malloc(sizeof(char) + 256);
         char *ctext=malloc(sizeof(char) + 256);
@@ -23,23 +35,26 @@ int main(int argc, char const *argv[])
         scanf("%[^\n]s", ptext);
 
         //Encryption
-        for (int i = 0; i <= strlen(ptext); i++) {
-                if (isalpha(ptext[i])) {
-                  if (isalpha((char)(ptext[i]+k))) {
-                    ctext[i]=(char)(ptext[i]+k);
+        for (int i = 0; i <= strlen(ptext); i++)
+          {
+                if (isalpha(ptext[i]))
+                  {
+                        if (isalpha((char)(ptext[i]+k)))
+                          {
+                                ctext[i]=(char)(ptext[i]+k);
+                          }
+                        else
+                          {
+                                ctext[i]=(char)(ptext[i]+k-26);
+                          }
                   }
-                  else  {
-                    ctext[i]=(char)(ptext[i]+k-26);
-                  }
-                }
                 else{
                         ctext[i]=ptext[i];
-                }
-        }
+                    }
+          }
 
         //Printing encrypted text
         printf("ciphertext: %s\n",ctext);
 
-
-END:    return 0;
+return 0;
 }
