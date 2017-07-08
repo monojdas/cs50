@@ -55,5 +55,6 @@ int gen(char *password_tryouts, char *character_set, char *argv1, char *salt, in
                           }
                   }
           }
+          
         return 1;
     }
