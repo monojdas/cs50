@@ -25,6 +25,7 @@ int main(int argc, char const *argv[])
                         return 1;
                 }
         }
+        
         //Initialization
         char *ptext=malloc(sizeof(char) + 256);
         char *ctext=malloc(sizeof(char) + 256);
