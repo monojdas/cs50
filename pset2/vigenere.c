@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 
-int main(int argc, char const *argv[])
+int main(int argc, char *argv[])
 {
         //Checking runtime input
         if (argc!=2)
@@ -73,8 +73,8 @@ int main(int argc, char const *argv[])
                   }
           }
 
-
         //Printing encrypted text
         printf("ciphertext: %s\n",ctext);
+
         return 0;
 }
