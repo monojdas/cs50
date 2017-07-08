@@ -48,7 +48,7 @@ int gen(char *password_tryouts, char *character_set, char *argv1, char *salt, in
                   }
                 else
                   {
-                        if(strcmp(crypt(password_tryouts, "50"), argv1)==0)
+                        if(strcmp(crypt(password_tryouts, salt), argv1)==0)
                           {
                                 printf("%s\n", password_tryouts);
                                 exit(0);
