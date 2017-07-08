@@ -10,7 +10,7 @@ int main(int argc, char const *argv[])
         if (argc!=2)
         {
                 printf("Pleae Type: caeser <key>\n");
-                goto END;
+                return 1;
         }
 
         //Initialization
